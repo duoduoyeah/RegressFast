@@ -1,2 +1,2 @@
-# Regress_Fast
-run OLS, Panal Data analysis, and DID fastly. Generate tidy latex table.
+# RegressFast
+Run OLS, Panel Data analysis, and DID fast. Generate a tidy latex table.
