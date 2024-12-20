@@ -1,5 +1,5 @@
 """
-URL configuration for RegressFast project.
+URL configuration for regress_fast project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,8 +16,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.contrib.auth import views as auth_views
+from . import views
 
 urlpatterns = [
+    path("", views.HomeView.as_view(), name="home"),
+    path("login/", views.login_view, name="login"),
+    path("logout/", views.logout_view, name="logout"),
     path("admin/", admin.site.urls),
+    path("regression_project/", include("regression_project.urls")),
 ]
