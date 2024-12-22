@@ -1,3 +1,3 @@
 [submodule "auto_reg"]
-	path = auto_reg
+	path = libs/auto_reg
 	url = git@github.com:duoduoyeah/AutoReg.git
