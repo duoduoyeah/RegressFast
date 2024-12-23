@@ -1,0 +1,2 @@
+.PHONY: update-requirements
+

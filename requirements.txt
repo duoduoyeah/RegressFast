@@ -14,4 +14,4 @@ langchain-cerebras
 groq
 langchain-groq
 langchain-openai
-langchain_community
+langchain_communitylitellm
