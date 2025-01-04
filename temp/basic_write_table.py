@@ -7,7 +7,7 @@ from linearmodels.panel.results import PanelEffectsResults
 # Ensure the parent directory of "libs" is on the path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from auto_reg import reg_model, auto_reg_analysis
-from libs.auto_reg.auto_reg_analysis.generate_table import generate_econometric_analysis_table
+from auto_reg.auto_reg_analysis.generate_table import generate_econometric_analysis_table
 
 CURRENT_FILE = Path(__file__).resolve()
 print(CURRENT_FILE)
