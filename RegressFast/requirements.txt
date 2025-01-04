@@ -1,0 +1,16 @@
+Django
+asgiref
+sqlparse
+tzdata
+djangorestframework
+markdown
+django-filter 
+pandas
+python-dotenv
+# langchain
+langchain
+cerebras_cloud_sdk
+langchain-cerebras
+groq
+langchain-groq
+langchain-openai

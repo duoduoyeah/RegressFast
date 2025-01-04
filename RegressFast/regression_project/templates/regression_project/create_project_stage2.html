@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Project - Stage Two</title>
+</head>
+<body>
+    <header>
+        <h1>Create New Project (Stage Two)</h1>
+    </header>
+    <main>
+        <p>Now select the variables from your CSV file:</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Finish</button>
+        </form>
+    </main>
+</body>
+</html> 

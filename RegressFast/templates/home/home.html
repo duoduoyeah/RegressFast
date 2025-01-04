@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      {% if user.is_authenticated %}
+        <span>Welcome, {{ user.username }}</span>
+        <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">Login</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main>
+    {% if user.is_authenticated %}
+        <!-- Authenticated user content -->
+        <div class="authenticated-content">
+            <div class="welcome">
+                <h2>Welcome, {{ user.username }}</h2>
+                <p>You can now create a new project</p>
+            </div>
+            
+            <div class="project-section">
+                <h3>Project</h3>
+                <div class="project-links">
+                    <div>
+                        <a href="{% url 'regression_project:create_project' %}">Create New Project</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'regression_project:index' %}">Existing Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <!-- Non-authenticated user content -->
+        <div class="guest-content">
+            <div class="welcome">
+                <h2>Welcome to App Upload</h2>
+                <p>Please login to upload your applications</p>
+            </div>
+            <div class="login-prompt">
+                <a href="{% url 'login' %}" class="login-button">Login to Upload</a>
+            </div>
+        </div>
+    {% endif %}
+  </main>
+</body>
+</html>
