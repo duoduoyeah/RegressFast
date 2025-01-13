@@ -1,0 +1,234 @@
+Basic Regressions with and without Controls
+\begin{table}[htbp]
+\caption{Effect of Extreme Temperature on Stock Revenue}
+\label{regression_effect_stock_revenue}
+\centering
+\begin{tabular}{p{5cm}p{3cm}p{3cm}} % The sum of the width of the columns should be no more than 12cm
+\toprule
+& (1) & (2) \\
+Dependent Variable  & stock revenue  & stock revenue \\
+\midrule
+extreme temperature  & 0.3346* & 0.3128* \\
+                       & (1.8459) & (1.8255) \\
+company size          &  & 0.1163** \\
+                       &  & (3.0972) \\
+company age           &  & 0.1444*** \\
+                       &  & (5.2309) \\
+company distance to sea &  & 0.0848** \\
+                       &  & (2.8131) \\
+rain amount           &  & 0.0905** \\
+                       &  & (2.7779) \\
+dry amount            &  & 0.1154*** \\
+                       &  & (3.1570) \\
+Constant               & -0.0380* & -0.0355* \\
+                       & (-1.8459) & (-1.8255) \\
+\midrule
+Number of id       & 1,000        & 1,000 \\
+Individual FE      & YES          & YES \\
+Year FE            & YES          & YES \\
+Observations       & 1,000       & 1,000 \\
+R-squared          & 0.005        & 0.071 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+Robustness Tests - Alternative Variables
+\begin{table}[htbp]
+\caption{Robustness Tests - Alternative Variables}
+\centering
+\begin{tabular}{p{5cm}p{3cm}p{3cm}}
+\toprule
+& (1) & (2) \\
+Dependent Variable  & stock\_revenue & stock revenue another measure method \\
+\midrule
+local\_climate\_variability  & 0.0351 &  \\
+                & (0.7871) &  \\
+extreme temperature &  & $0.3171$* \\
+                &  & $(1.8046)$ \\
+company\_size     & 0.1157 & $0.1128$*** \\
+                & (3.0719) & $(2.9526)$ \\
+company\_age     & 0.1470 & $0.1414$*** \\
+                & (5.3166) & $(5.0744)$ \\
+company\_distance\_to\_sea & 0.0830 & $0.0594$* \\
+                & (2.7382) & $(1.9135)$ \\
+rain\_amount     & 0.0906 & $0.0761$** \\
+                & (2.7329) & $(2.3609)$ \\
+dry\_amount      & 0.1153 & $0.0896$** \\
+                & (3.1355) & $(2.3634)$ \\
+Constant    & -1.337e-11 & $-0.0360$* \\
+                & (-21.776) & $(-1.8046)$ \\
+\midrule
+Number of id       & 100 & 100 \\
+Individual FE      & YES & YES \\
+Year FE            & YES & YES \\
+Observations       & 1,000 & 1,000 \\
+R-squared          & 0.0670 & 0.0552 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+Robustness Tests - Alternative Fixed Effects and Extra Controls
+\begin{table}[htbp]
+\caption{Robustness Tests - Alternative Fixed Effects and Extra Controls}
+\label{robustness_tests_combined}
+\centering
+\begin{tabular}{p{5cm}p{3cm}p{3cm}}
+\toprule
+ & (1) & (2) \\
+Dependent Variable  & stock revenue & stock revenue \\
+\midrule
+Independent Variable: extreme temperature  & 0.2595*** & 0.3127* \\
+ & (4.0913) & (1.8413) \\
+Control Variable: company size & 0.1260*** & 0.1172** \\
+ & (3.6923) & (3.1365) \\
+Control Variable: company age & 0.1366*** & 0.1388*** \\
+ & (5.4393) & (5.0309) \\
+Control Variable: company distance to sea & 0.0849*** & 0.0795** \\
+ & (3.1000) & (2.6553) \\
+Control Variable: rain amount & 0.0986*** & 0.0875** \\
+ & (3.3354) & (2.6468) \\
+Control Variable: dry amount & 0.1165*** & 0.1164** \\
+ & (3.5867) & (3.2214) \\
+Control Variable: windy & - & 0.0873** \\
+ & & (2.7759) \\
+Constant    & -0.0295 & -0.0355* \\
+ & (-1.0053) & (-1.8413) \\
+\midrule
+Number of id       & 100 & 100 \\
+Individual FE      & NO & YES \\
+Year FE            & YES & YES \\
+Other FE (industry) & YES & - \\
+Observations       & 1,000 & 1,000 \\
+R-squared          & 0.0843 & 0.0782 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+2SLS Endogeneity Test - Instrument Variables
+\begin{table}[htbp]
+    \caption{2SLS Endogeneity Test Using Instrument Variable Company Latitude}
+    \label{2SLS_Endogeneity_Test}
+    \centering
+    \begin{tabular}{p{5cm}p{3cm}p{3cm}} % The sum of the width of the columns should be no more than 12cm
+    \toprule
+    & (1) & (2) \\
+    Variable Name  & extreme temperature & stock revenue \\
+    \midrule
+    Instrumental Variable   & 0.0340*** & empty \\
+                & (4.4059) &  \\
+    Predicted Independent variable   & empty & -0.8668 \\
+                &  & (-0.7999) \\
+    Control Variable 1     & 0.0041   & 0.1201*** \\
+                & (0.5645) & (3.2104) \\
+    Control Variable 2     & 0.0119   & 0.1580*** \\
+                & (1.5450) & (5.2136) \\
+    Control Variable 3     & -0.0069  & 0.0769** \\
+                & (-1.0471)& (2.4707) \\
+    Control Variable 4     & -0.0039  & 0.0865*** \\
+                & (-0.5307)& (2.6404) \\
+    Control Variable 5     & -0.0020  & 0.1135*** \\
+                & (-0.2718)& (3.0760) \\
+    Constant    & 0.1136 * & empty \\
+                & (688114562890) & ( ) \\
+    Number of id       & 100       & 100 \\
+    Individual FE      & YES       & YES \\
+    Year FE            & YES       & YES \\
+    Observations       & 1000       & 1000 \\
+    R-squared          & 0.0424    & 0.0533 \\
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+    \small
+    \item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+    \end{tablenotes}
+    \end{table}
+
+Mediating Effect Test
+\begin{table}[htbp]
+\caption{Mediating Effect Test: Correlation between Extreme Temperature and Invester Mood}
+\label{mediating_effect_test_correlation}
+\centering
+\begin{tabular}{p{5cm}p{3cm}p{3cm}} % The sum of the width of the columns should be no more than 12cm
+\toprule
+& (1) & (2) \\
+Dependent Variable  & invester mood & invester mood \\
+\midrule
+Independent Variable (extreme temperature) & 1.2200*** & 1.2200*** \\ 
+& (11.764) & (11.764) \\
+Control Variable (company size) & 0.0262 & 0.0262 \\
+& (1.1760) & (1.1760) \\
+Control Variable (company age) & 0.0044 & 0.0044 \\
+& (0.1874) & (0.1874) \\
+Control Variable (company distance to sea) & -0.0028 & -0.0028 \\
+& (-0.1175) & (-0.1175) \\
+Control Variable (rain amount) & 0.0099 & 0.0099 \\
+& (0.4826) & (0.4826) \\
+Control Variable (dry amount) & 0.0365 & 0.0365 \\
+& (1.7900) & (1.7900) \\
+Constant & -0.1385*** & -0.1385*** \\
+& (-11.764) & (-11.764) \\
+
+Number of id & 100 & 100 \\
+Individual FE & YES & YES \\
+Year FE & YES & YES \\
+Observations & 1,000 & 1,000 \\
+R-squared & 0.1464 & 0.1464 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+Heterogeneity Test by Group Variables: is_high_tech and is_near_sea
+\begin{table}[htbp]
+\caption{Heterogeneity Test by Group Variables: is\_high\_tech and is\_near\_sea}
+\label{heterogeneity_test_by_group_variables}
+\centering
+\begin{tabular}{p{3.6cm}p{3.6cm}p{3.6cm}p{3.6cm}p{3.6cm}}
+\toprule
+& (1) & (2) & (3) & (4) \\
+Group & Non-High Tech & High Tech & Not Near Sea & Near Sea \\
+Dependent Variable & stock revenue & stock revenue & stock revenue & stock revenue \\
+\midrule
+Independent Variable (extreme temperature) & $0.2271$ & $0.3294$* & $0.1937$ & $0.4407$** \\
+& $(0.7526)$ & $(1.6914)$ & $(0.7284)$ & $(2.0864)$ \\
+Control Variable (company size) & $0.1855$** & $0.0703$ & $0.1089$ & $0.1121$** \\
+& $(3.0074)$ & $(1.5605)$ & $(1.9206)$ & $(2.2995)$ \\
+Control Variable (company age) & $0.1626$** & $0.1379$*** & $0.1438$*** & $0.1309$*** \\
+& $(3.2719)$ & $(3.9991)$ & $(3.5217)$ & $(3.2380)$ \\
+Control Variable (company distance to sea) & $0.0700$ & $0.0948$** & $0.0974$** & $0.0688$ \\
+& $(1.4121)$ & $(2.3689)$ & $(2.2465)$ & $(1.6490)$ \\
+Control Variable (rain amount) & $0.0765$ & $0.0968$** & $0.1365$*** & $0.0587$ \\
+& $(1.6738)$ & $(2.1483)$ & $(2.8436)$ & $(1.3955)$ \\
+Control Variable (dry amount) & $0.1075$* & $0.1180$** & $0.0672$ & $0.1557$*** \\
+& $(2.0170)$ & $(2.3930)$ & $(1.4143)$ & $(2.9593)$ \\
+Constant & $0.0189$ & $-0.0660$*** & $-0.0450$ & $-0.0314$ \\
+& $(0.3886)$ & $(-4.1533)$ & $(-1.5302)$ & $(-1.2738)$ \\
+\midrule
+Number of id & 41 & 59 & 470 & 530 \\
+Individual FE & YES & YES & YES & YES \\
+Year FE & YES & YES & YES & YES \\
+Observations & 410 & 590 & 470 & 530 \\
+R-squared & 0.097 & 0.058 & 0.0712 & 0.0719 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+

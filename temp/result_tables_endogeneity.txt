@@ -1,0 +1,40 @@
+Index: 5
+ Under Index 5, the number of regressions is: 2
+2SLS endogeneity test - instrument variables: company_latitude
+ 
+\begin{table}[htbp]
+\caption{2SLS Endogeneity Test}
+\label{2sls_endogeneity_test}
+\centering
+\begin{tabular}{p{3.6cm}p{3.6cm}p{3.6cm}} % Three columns of equal width totaling ~11cm
+\toprule
+& (1) & (2) \\
+Dependent Variable  & extreme temperature  & stock revenue \\
+\midrule
+company latitude  & $0.0340$*** & \\
+                & $(4.4059)$ & \\
+company size     & $0.0041$ & $0.1201$*** \\
+                & $(0.5645)$ & $(3.2104)$ \\
+company age      & $0.0119$ & $0.1580$*** \\
+                & $(1.5450)$ & $(5.2136)$ \\
+company distance to sea & $-0.0069$ & $0.0769$** \\
+                & $(-1.0471)$ & $(2.4707)$ \\
+rain amount      & $-0.0039$ & $0.0865$** \\
+                & $(-0.5307)$ & $(2.6404)$ \\
+dry amount       & $-0.0020$ & $0.1135$*** \\
+                & $(-0.2718)$ & $(3.0760)$ \\
+Constant         & $0.1136$*** & \\
+                & $(6.881e+11)$ & \\
+Number of id     & 100        & 100 \\
+Individual FE    & YES        & YES \\
+Year FE          & YES        & YES \\
+Observations     & 1,000      & 1,000 \\
+R-squared        & 0.0294     & 0.0672 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+

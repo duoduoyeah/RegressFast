@@ -11,7 +11,6 @@ import pandas as pd
 from auto_reg.reg_model.panel_data import basic_panel_data
 from auto_reg.auto_reg_setup.regression_config import *
 from auto_reg.auto_reg_analysis.generate_table import generate_econometric_analysis_table
-from auto_reg.auto_reg_analysis.generate_analysis import analyze_regression_results
 
 class TestBasicFunction(unittest.TestCase):
     def setup(self, model_name: str = "gpt-4o"):
@@ -178,19 +177,6 @@ class TestBasicFunction(unittest.TestCase):
             print(f"\nResults for {het_var}=1:")
             print(het_result_1)
 
-
-    def test_write_regression_analysis_report(self):
-        """
-        TODO:
-        """
-        pass
-
-
-    def test_basic_loop(self):
-        """
-        TODO:
-        """
-        pass
 
 
 if __name__ == '__main__':

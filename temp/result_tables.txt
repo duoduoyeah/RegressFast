@@ -1,0 +1,43 @@
+Index: 0
+ Under Index 0, the number of regressions is: 2
+Two Basic regressions.with and without controls
+ The first regression result is the one without controls
+ The second regression result is the one with controls
+ 
+\begin{table}[htbp]
+\caption{Regression Results}
+\label{regression_results}
+\centering
+\begin{tabular}{p{3.6cm}p{3.6cm}p{3.6cm}} % Three columns of equal width totaling ~11cm
+\toprule
+& (1) & (2) \\
+Dependent Variable  & stock\_revenue & stock\_revenue \\
+\midrule
+extreme\_temperature  & 0.3346* & 0.3128* \\
+                & (1.8459) & (1.8255) \\
+company\_size     &  & 0.1163*** \\
+                &  & (3.0972) \\
+company\_age     &  & 0.1444*** \\
+                &  & (5.2309) \\
+company\_distance\_to\_sea     &  & 0.0848** \\
+                &  & (2.8131) \\
+rain\_amount     &  & 0.0905** \\
+                &  & (2.7779) \\
+dry\_amount     &  & 0.1154*** \\
+                &  & (3.1570) \\
+Constant    & -0.0380* & -0.0355* \\
+                & (-1.8459) & (-1.8255) \\
+
+Number of id       & 1000        & 1000 \\
+Individual FE      & YES          & YES \\
+Year FE            & YES          & YES \\
+Observations       & 1,000       & 1,000 \\
+R-squared          & 0.005        & 0.071 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+

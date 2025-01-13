@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from auto_reg.auto_reg_setup.var_generation import *
+from libs.auto_reg.auto_reg_setup.generate_var import *
 
 def main():
     # Read the simulated data CSV file

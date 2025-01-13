@@ -1,0 +1,44 @@
+ 
+ 
+ 
+ 
+\begin{table}[htbp]
+\caption{Robustness Tests - Alternative Fixed Effects and Extra Controls}
+\label{Robustness Tests - Alternative Fixed Effects and Extra Controls}
+\centering
+\begin{tabular}{p{5cm}p{3cm}p{3cm}}
+\toprule
+& (1) & (2) \\
+Dependent Variable  & stock revenue  & stock revenue \\
+\midrule
+extreme temperature  & $0.2595$*** & $0.3127$* \\
+                & $(4.0913)$ & $(1.8413)$ \\
+company size     & $0.1260$*** & $0.1172$*** \\
+                & $(3.6923)$ & $(3.1365)$ \\
+company age     & $0.1366$*** & $0.1388$*** \\
+                & $(5.4393)$ & $(5.0309)$ \\
+company distance to sea & $0.0849$*** & $0.0795$** \\
+                & $(3.1000)$ & $(2.6553)$ \\
+rain amount     & $0.0986$*** & $0.0875$** \\
+                & $(3.3354)$ & $(2.6468)$ \\
+dry amount      & $0.1165$*** & $0.1164$*** \\
+                & $(3.5867)$ & $(3.2214)$ \\
+windy           & -- & $0.0873$** \\
+                &  & $(2.7759)$ \\
+Constant    & $-0.0295$ & $-0.0355$* \\
+                & $(-1.0053)$ & $(-1.8413)$ \\
+\midrule
+Number of id       & 100 & 100 \\
+Individual FE      & YES & YES \\
+Year FE            & YES & YES \\
+Other FE (industry) & YES &   \\
+Observations       & 1,000 & 1,000 \\
+R-squared          & 0.0843 & 0.0782 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+

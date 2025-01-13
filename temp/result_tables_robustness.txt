@@ -1,0 +1,129 @@
+Index: 1
+ Under Index 1, the number of regressions is: 1
+robustness test - alternative independent variable: local_climate_variability
+ 
+\begin{table}[htbp]
+\caption{Regression Results for the Relationship between Local Climate Variability and Stock Revenue}
+\label{tab:local_climate_variability}
+\centering
+\begin{tabular}{p{5cm}p{3.6cm}}
+\toprule
+ & (1) \\
+Dependent Variable  & stock\_revenue \\
+\midrule
+local\_climate\_variability  & 0.0351 \\
+                & (0.7871) \\
+company\_size     & 0.1157*** \\
+                & (3.0719) \\
+company\_age     & 0.1470*** \\
+                & (5.3166) \\
+company\_distance\_to\_sea     & 0.0830** \\
+                & (2.7382) \\
+rain\_amount     & 0.0906** \\
+                & (2.7329) \\
+dry\_amount     & 0.1153*** \\
+                & (3.1355) \\
+Constant   & -1.337e-11 \\
+                & (-21.776) \\
+Number of id       & 100        \\
+Individual FE      & YES          \\
+Year FE            & YES          \\
+Observations       & 1,000       \\
+R-squared          & 0.067       \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+Index: 2
+ Under Index 2, the number of regressions is: 1
+robustness test - alternative dependent variable: stock_revenue_another_measure_method
+ 
+\begin{table}[htbp] \caption{Regression Results for Stock Revenue Another Measure Method} \label{robustness_test_alternative_dependent_variable} \centering \begin{tabular}{p{3.6cm}p{3.6cm}} \toprule & (1) \\ Dependent Variable  & stock\_revenue\_another\_measure\_method \\ \midrule extreme\_temperature  & 0.3171 \* \\ & (1.8046) \\ company\_size     & 0.1128 ** \\ & (2.9526) \\ company\_age     & 0.1414 *** \\ & (5.0744) \\ company\_distance\_to\_sea     & 0.0594 \* \\ & (1.9135) \\ rain\_amount     & 0.0761 ** \\ & (2.3609) \\ dry\_amount     & 0.0896 ** \\ & (2.3634) \\ Constant    & -0.0360 \* \\ & (-1.8046) \\ Number of id       & 100 \\ Individual FE      & YES \\ Year FE            & YES \\ Observations       & 1,000 \\ R-squared          & 0.055 \\ \bottomrule \end{tabular} \begin{tablenotes} \small \item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively. \end{tablenotes} \end{table}
+
+Index: 3
+ Under Index 3, the number of regressions is: 1
+robustness test - alternative fixed effects: ['year', 'industry']
+ 
+\begin{table}[htbp]
+\caption{Regression Results for Stock Abnormal Return}
+\label{robustness_test_alternative_fixed_effects}
+\centering
+\begin{tabular}{p{3.6cm}p{3.6cm}}
+\toprule
+& (1) \\
+Dependent Variable  & stock\_revenue \\
+\midrule
+extreme\_temperature  & 0.2595*** \\
+                & (4.0913) \\
+company\_size          & 0.1260*** \\
+                & (3.6923) \\
+company\_age           & 0.1366*** \\
+                & (5.4393) \\
+company\_distance\_to\_sea & 0.0849*** \\
+                & (3.1000) \\
+rain\_amount           & 0.0986*** \\
+                & (3.3354) \\
+dry\_amount           & 0.1165*** \\
+                & (3.5867) \\
+Constant        & -0.0295 \\
+                & (-1.0053) \\
+
+Number of id       & 100 \\
+Individual FE      & YES \\
+Year FE            & YES \\
+Observations       & 1,000 \\
+R-squared          & 0.0843 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+Index: 4
+ Under Index 4, the number of regressions is: 1
+robustness test - adding extra control variables: ['windy']
+ 
+\begin{table}[htbp]
+\caption{Regression Results for the Relationship Between Investment in Extreme Temperature and Company Stock Abnormal Return}
+\label{robustness_test_adding_extra_control_variables}
+\centering
+\begin{tabular}{p{3.6cm}p{3.6cm}p{3.6cm}} % Three columns of equal width totaling ~11cm
+\toprule
+& (1) &  \\
+Dependent Variable  & Stock Revenue  &  \\
+\midrule
+Extreme Temperature  & 0.3127** &  \\
+                & (1.8413) &  \\
+Company Size  & 0.1172*** &  \\
+                & (3.1365) &  \\
+Company Age  & 0.1388*** &  \\
+                & (5.0309) &  \\
+Company Distance to Sea  & 0.0795*** &  \\
+                & (2.6553) &  \\
+Rain Amount    & 0.0875*** &  \\
+                & (2.6468) &  \\
+Dry Amount     & 0.1164*** &  \\
+                & (3.2214) &  \\
+Windy          & 0.0873*** &  \\
+                & (2.7759) &  \\
+Constant       & -0.0355*  &  \\
+                & (-1.8413) &  \\
+Number of id       & 100        &  \\
+Individual FE      & YES          &  \\
+Year FE            & YES          &  \\
+Observations       & 1,000       &  \\
+R-squared          & 0.078        &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Note:} t-statistics are in parentheses; *, **, *** denote significance at the 10\%, 5\%, and 1\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
